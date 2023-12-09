@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int lenstr = 0;
 	va_list argp;
-	char *str = "Enter correct specifier";
+	char *str = "Enter correct specifier\n";
 
 	va_start(argp, format);
 
