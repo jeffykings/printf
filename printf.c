@@ -10,10 +10,11 @@ int _printf(const char *format, ...)
 {
 	int lenstr = 0;
 	va_list argp;
-	char *str = "Enter correct specifier\n";
 
 	va_start(argp, format);
 
+	if (format == NULL)
+		return (-1);
 	while (*format != '\0')
 	{
 		if (*format == '%')
@@ -35,10 +36,9 @@ int _printf(const char *format, ...)
 				format++;
 			}
 			else
-			{
-				write(1, str, strlen(str));
-				exit(1);
-			}
+				lenstr += prnt_char('%');
+			lenstr += prnt_char(*format);
+			format++;
 		}
 		else
 		{
