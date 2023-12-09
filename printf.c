@@ -35,8 +35,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				fprintf(stderr, "The value %c is not a specifier", format);
-				exit(1);
+				continue;
 			}
 		}
 		else
