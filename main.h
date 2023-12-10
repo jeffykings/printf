@@ -6,6 +6,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 int _printf(const char *format, ...);
-int prntstrng(char * str);
+int prntstrng(char *str);
 int prnt_char(char c);
 #endif

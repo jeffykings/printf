@@ -10,6 +10,11 @@ int prntstrng(char *str)
 {
 	int lenstr;
 
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	for (lenstr = 0; str[lenstr] != '\0'; lenstr++)
 	{
 	}

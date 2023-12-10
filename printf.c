@@ -32,15 +32,15 @@ int _printf(const char *format, ...)
 			{
 				lenstr += prnt_char('%');
 				format++;
-			}
-			else
+			} else
 			{
 				lenstr += prnt_char('%');
+				if (*format == '\0')
+					return (-1);
 				lenstr += prnt_char(*format);
 				format++;
 			}
-		}
-		else
+		} else
 		{
 			lenstr += prnt_char(*format);
 			format++;
