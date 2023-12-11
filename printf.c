@@ -34,9 +34,9 @@ int _printf(const char *format, ...)
 				format++;
 			} else
 			{
-				lenstr += prnt_char('%');
 				if (*format == '\0')
 					return (-1);
+				lenstr += prnt_char('%');
 				lenstr += prnt_char(*format);
 				format++;
 			}
