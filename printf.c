@@ -20,27 +20,13 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == 'c')
-			{
-				lenstr += prnt_char(va_arg(argp, int));
-				format++;
-			} else if (*format == 's')
-			{
-				lenstr += prntstrng(va_arg(argp, char *));
-				format++;
-			} else if (*format == '%')
-			{
-				lenstr += prnt_char('%');
-				format++;
-			} else
-			{
-				if (*format == '\0')
-					return (-1);
-				lenstr += prnt_char('%');
-				lenstr += prnt_char(*format);
-				format++;
-			}
-		} else
+
+			if (*format == '\0')
+				return (-1);
+			lenstr += spec_checker(format);
+			format++;
+		}
+		else
 		{
 			lenstr += prnt_char(*format);
 			format++;

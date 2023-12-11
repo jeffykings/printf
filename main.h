@@ -8,4 +8,5 @@
 int _printf(const char *format, ...);
 int prntstrng(char *str);
 int prnt_char(char c);
+int spec_checker(char *format);
 #endif
