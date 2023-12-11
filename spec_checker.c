@@ -1,16 +1,16 @@
 #include "main.h"
 
-int spec_checker(char *format)
+int spec_checker(char format, va_list argp)
 {
 	int lenstr = 0;
 
-	if (*format == 'c')
+	if (format == 'c')
 		return (lenstr += prnt_char(va_arg(argp, int)));
-	else if (*format == 's')
+	else if (format == 's')
 		return (lenstr += prntstrng(va_arg(argp, char *)));
-	else if (*format == '%')
+	else if (format == '%')
 		return (lenstr += prnt_char('%'));
 
 	lenstr += prnt_char('%');
-	return (lenstr += prnt_char(*format));
+	return (lenstr += prnt_char(format));
 }

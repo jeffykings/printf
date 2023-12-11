@@ -14,7 +14,10 @@ int _printf(const char *format, ...)
 	va_start(argp, format);
 
 	if (format == NULL)
+	{
+		va_end(argp);
 		return (-1);
+	}
 	while (*format != '\0')
 	{
 		if (*format == '%')
@@ -23,7 +26,7 @@ int _printf(const char *format, ...)
 
 			if (*format == '\0')
 				return (-1);
-			lenstr += spec_checker(format);
+			lenstr += spec_checker(*format, argp);
 			format++;
 		}
 		else

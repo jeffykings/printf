@@ -8,5 +8,5 @@
 int _printf(const char *format, ...);
 int prntstrng(char *str);
 int prnt_char(char c);
-int spec_checker(char *format);
+int spec_checker(char format, va_list argp);
 #endif
