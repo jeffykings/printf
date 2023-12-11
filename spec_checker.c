@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+  * spec_checker - checks for the specifier
+  * @format: takes character
+  * @argp: list of variadic functions
+  *
+  * Return: Nothing
+  */
+
 int spec_checker(char format, va_list argp)
 {
 	int lenstr = 0;
