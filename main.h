@@ -5,8 +5,10 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 int _printf(const char *format, ...);
 int prntstrng(char *str);
 int prnt_char(char c);
 int spec_checker(char format, va_list argp);
+int prnt_INT(int num);
 #endif
